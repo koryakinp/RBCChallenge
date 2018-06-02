@@ -19,16 +19,7 @@ namespace XUnitTestProject1
 
         public int AMethodSimplyfied(bool first, bool second, bool third)
         {
-            if (!first)
-            {
-                return OptionOne;
-            }
-            else if (!second || !third)
-            {
-                return OptionTwo;
-            }
-
-            return OptionOne;
+            return !first || (second && third) ? OptionOne : OptionTwo;
         }
 
         public int AMethod(bool first, bool second, bool third)
